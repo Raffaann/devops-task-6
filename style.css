@@ -1,12 +1,64 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    text-align: center;
+/* --- 1. Import the retro font --- */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* --- 2. Universal Settings --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* --- 3. Main Body & Background --- */
+body {
+  font-family: 'VT323', monospace;
+  background-color: #1a012d; /* Deep dark purple */
+  color: #00f2ff; /* Neon cyan */
+  
+  /* This centers your content perfectly */
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  text-align: center;
+  
+  /* Add a glowing neon border */
+  border: 5px solid #ff00ff;
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff inset;
+}
+
+/* --- 4. Header (h1) --- */
 h1 {
-    color: #0366d6;
+  font-size: 4rem; /* Make it nice and big */
+  color: #ff00ff; /* Bright neon pink */
+  
+  /* This creates the neon glow effect */
+  text-shadow: 
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+    
+  /* --- 5. Animation --- */
+  animation: pulseGlow 3s infinite alternate;
+}
+
+/* --- 6. Paragraph (p) --- */
+p {
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px #00f2ff; /* A softer glow for the subtext */
+  margin-top: 1rem;
+}
+
+/* --- 7. The Animation Code --- */
+@keyframes pulseGlow {
+  from {
+    /* Start state: normal glow */
+    text-shadow: 
+      0 0 10px #ff00ff,
+      0 0 20px #ff00ff;
+  }
+  to {
+    /* End state: brighter, pulsing glow */
+    text-shadow: 
+      0 0 20px #ff00ff,
+      0 0 40px #ff00ff;
+  }
 }
